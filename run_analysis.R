@@ -75,9 +75,10 @@ y <- rbind(y_test,y_train)
 # Y test data.
 activity <- read.table("activity_labels.txt")
 
-# Merge the Y test data with descriptive names
+# Join the Y test data with descriptive names
 # from activity labels.
-y <- merge(y,activity)
+library(plyr)
+y <- join(y,activity)
 
 # Set column names for the merged Y test data.
 colnames(y) <- c("activity_code","activity")
@@ -138,7 +139,7 @@ hamelt <- melt(HAR,id.vars = c(1:2), measure.vars = 3:68)
 
 # Use the dcast function to group the data set by subject
 # and activity.  Take the average/mean of all the measurement
-# variables.  This reduces the data set to 35 rows and 68
+# variables.  This reduces the data set to 180 rows and 68
 # columns.
 HAR_AVG <- dcast(hamelt, subject + activity ~ c(measName), mean)
 

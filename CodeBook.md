@@ -43,10 +43,10 @@ These measurements were grouped by study participant and activity, and a standar
 ## Current Summary DataSet:
 
 * Data Set Characteristics:  Multivariate, Time-Series
-* Number of Instances:  35
+* Number of Instances:  180
 * Number of Attributes:  68
 * Missing Values?  n/a
-* Date Prepared:  2016-08-14
+* Date Prepared:  2016-08-15
 
 ## Original DataSet: 
 
